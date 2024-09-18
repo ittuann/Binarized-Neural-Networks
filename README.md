@@ -1,6 +1,6 @@
-# Binarized Neural Networks (BNN) Implementation
+# Binarized Neural Network (BNN) Implementation
 
-This repository contains the implementation of Binarized Neural Networks (BNN), using TensorFlow 2 and PyTorch , with inference using Numpy and C.
+This repository contains the implementation of Binarized Neural Networks (BNNs), using TensorFlow 2 and PyTorch , with inference using Numpy and C.
 
 Binarized Neural Networks are a type of deep learning model where weights and activations are constrained to binary values, typically -1 and +1.
 
