@@ -5,30 +5,11 @@ Note:
     Author : Baiqi.Lu <ittuann@outlook.com>
 """
 
-import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 import shutil
 import datetime
-
-
-class SaveModelCallback(tf.keras.callbacks.Callback):
-    """自动保存模型回调类"""
-
-    def __init__(self, save_freq=100, save_path="./model", save_name="model_epoch"):
-        super().__init__()
-        self.save_freq = save_freq
-        self.save_path = Path(save_path)
-        self.save_name = save_name
-
-        # 确保保存路径存在
-        self.save_path.mkdir(parents=True, exist_ok=True)
-
-    def on_epoch_end(self, epoch, logs=None):
-        if (epoch + 1) % self.save_freq == 0:
-            self.model.save(self.save_path / f"{self.save_name}_{epoch + 1}.h5")
-            print(f"\n Model auto saved at epoch {epoch + 1}")
 
 
 def plt_training_validation_metrics(
